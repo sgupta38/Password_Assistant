@@ -2,7 +2,6 @@
 #define REGISTER_H
 
 #include <QDialog>
-#include <QtSql/QSql>
 
 namespace Ui {
 class registerr;
@@ -21,6 +20,13 @@ private slots:
 
 private:
     Ui::registerr *ui;
+
+public:
+    QString cat;
+    void setCategory(QString category)
+    {
+        cat = category;
+    }
 
 };
 

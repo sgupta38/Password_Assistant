@@ -224,6 +224,9 @@ release/moc_mainwindow.cpp: ../../QT/5.6/mingw49_32/include/QtWidgets/QMainWindo
 		register.h \
 		../../QT/5.6/mingw49_32/include/QtSql/QSql \
 		../../QT/5.6/mingw49_32/include/QtSql/qsql.h \
+		../../QT/5.6/mingw49_32/include/QtSql/QSqlDatabase \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqldatabase.h \
+		../../QT/5.6/mingw49_32/include/QtCore/QDebug \
 		mainwindow.h
 	D:\QT\5.6\mingw49_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.6/mingw49_32/mkspecs/win32-g++ -I"D:/qT common/Password_Assistant" -ID:/QT/5.6/mingw49_32/include -ID:/QT/5.6/mingw49_32/include/QtWidgets -ID:/QT/5.6/mingw49_32/include/QtGui -ID:/QT/5.6/mingw49_32/include/QtANGLE -ID:/QT/5.6/mingw49_32/include/QtSql -ID:/QT/5.6/mingw49_32/include/QtCore mainwindow.h -o release\moc_mainwindow.cpp
 
@@ -441,8 +444,6 @@ release/moc_register.cpp: ../../QT/5.6/mingw49_32/include/QtWidgets/QDialog \
 		../../QT/5.6/mingw49_32/include/QtCore/qfiledevice.h \
 		../../QT/5.6/mingw49_32/include/QtGui/qvector2d.h \
 		../../QT/5.6/mingw49_32/include/QtGui/qtouchdevice.h \
-		../../QT/5.6/mingw49_32/include/QtSql/QSql \
-		../../QT/5.6/mingw49_32/include/QtSql/qsql.h \
 		register.h
 	D:\QT\5.6\mingw49_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -ID:/QT/5.6/mingw49_32/mkspecs/win32-g++ -I"D:/qT common/Password_Assistant" -ID:/QT/5.6/mingw49_32/include -ID:/QT/5.6/mingw49_32/include/QtWidgets -ID:/QT/5.6/mingw49_32/include/QtGui -ID:/QT/5.6/mingw49_32/include/QtANGLE -ID:/QT/5.6/mingw49_32/include/QtSql -ID:/QT/5.6/mingw49_32/include/QtCore register.h -o release\moc_register.cpp
 
@@ -698,6 +699,9 @@ release/main.o: main.cpp mainwindow.h \
 		register.h \
 		../../QT/5.6/mingw49_32/include/QtSql/QSql \
 		../../QT/5.6/mingw49_32/include/QtSql/qsql.h \
+		../../QT/5.6/mingw49_32/include/QtSql/QSqlDatabase \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqldatabase.h \
+		../../QT/5.6/mingw49_32/include/QtCore/QDebug \
 		../../QT/5.6/mingw49_32/include/QtWidgets/QApplication \
 		../../QT/5.6/mingw49_32/include/QtWidgets/qapplication.h \
 		../../QT/5.6/mingw49_32/include/QtCore/qcoreapplication.h \
@@ -822,6 +826,9 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		register.h \
 		../../QT/5.6/mingw49_32/include/QtSql/QSql \
 		../../QT/5.6/mingw49_32/include/QtSql/qsql.h \
+		../../QT/5.6/mingw49_32/include/QtSql/QSqlDatabase \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqldatabase.h \
+		../../QT/5.6/mingw49_32/include/QtCore/QDebug \
 		ui_mainwindow.h \
 		../../QT/5.6/mingw49_32/include/QtCore/QVariant \
 		../../QT/5.6/mingw49_32/include/QtWidgets/QAction \
@@ -1141,8 +1148,6 @@ release/register.o: register.cpp register.h \
 		../../QT/5.6/mingw49_32/include/QtCore/qfiledevice.h \
 		../../QT/5.6/mingw49_32/include/QtGui/qvector2d.h \
 		../../QT/5.6/mingw49_32/include/QtGui/qtouchdevice.h \
-		../../QT/5.6/mingw49_32/include/QtSql/QSql \
-		../../QT/5.6/mingw49_32/include/QtSql/qsql.h \
 		ui_register.h \
 		../../QT/5.6/mingw49_32/include/QtCore/QVariant \
 		../../QT/5.6/mingw49_32/include/QtWidgets/QAction \
@@ -1196,7 +1201,139 @@ release/register.o: register.cpp register.h \
 		../../QT/5.6/mingw49_32/include/QtWidgets/QWidget \
 		../../QT/5.6/mingw49_32/include/QtSql/QSqlDatabase \
 		../../QT/5.6/mingw49_32/include/QtSql/qsqldatabase.h \
-		../../QT/5.6/mingw49_32/include/QtCore/QDebug
+		../../QT/5.6/mingw49_32/include/QtSql/qsql.h \
+		../../QT/5.6/mingw49_32/include/QtSql/QtSql \
+		../../QT/5.6/mingw49_32/include/QtSql/QtSqlDepends \
+		../../QT/5.6/mingw49_32/include/QtCore/QtCore \
+		../../QT/5.6/mingw49_32/include/QtCore/QtCoreDepends \
+		../../QT/5.6/mingw49_32/include/QtCore/qabstractanimation.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qanimationgroup.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qparallelanimationgroup.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qpauseanimation.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qpropertyanimation.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qvariantanimation.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qeasingcurve.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsequentialanimationgroup.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtextcodec.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qendian.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qlibraryinfo.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qdatetime.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qbuffer.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qdir.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfileinfo.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qdiriterator.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfileselector.h \
+		../../QT/5.6/mingw49_32/include/QtCore/QObject \
+		../../QT/5.6/mingw49_32/include/QtCore/QStringList \
+		../../QT/5.6/mingw49_32/include/QtCore/qfilesystemwatcher.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qlockfile.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qloggingcategory.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qprocess.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qresource.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsavefile.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsettings.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qstandardpaths.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qstorageinfo.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtemporarydir.h \
+		../../QT/5.6/mingw49_32/include/QtCore/QScopedPointer \
+		../../QT/5.6/mingw49_32/include/QtCore/qtemporaryfile.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qabstractproxymodel.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qidentityproxymodel.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsortfilterproxymodel.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qstringlistmodel.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qjsonarray.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qjsonvalue.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qjsondocument.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qjsonobject.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qabstracteventdispatcher.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qabstractnativeeventfilter.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qbasictimer.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qmath.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qmetaobject.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qmimedata.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qobjectcleanuphandler.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qpointer.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsharedmemory.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsignalmapper.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsocketnotifier.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsystemsemaphore.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtimer.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtranslator.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qwineventnotifier.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qmimedatabase.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qmimetype.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfactoryinterface.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qlibrary.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qplugin.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qpluginloader.h \
+		../../QT/5.6/mingw49_32/include/QtCore/quuid.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qabstractstate.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qabstracttransition.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qeventtransition.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfinalstate.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qhistorystate.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsignaltransition.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qstate.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qstatemachine.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qexception.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfuture.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfutureinterface.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qrunnable.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qresultstore.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfuturesynchronizer.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qfuturewatcher.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qreadwritelock.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qsemaphore.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qthread.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qthreadpool.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qthreadstorage.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qwaitcondition.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qarraydataops.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qarraydatapointer.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qbitarray.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qbytearraymatcher.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qcache.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qcollator.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qcommandlineoption.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qcommandlineparser.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qcryptographichash.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qelapsedtimer.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qlinkedlist.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qmessageauthenticationcode.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qqueue.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qscopedvaluerollback.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qstack.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtextboundaryfinder.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtimeline.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtimezone.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qversionnumber.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qxmlstream.h \
+		../../QT/5.6/mingw49_32/include/QtCore/qtcoreversion.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqldriver.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqldriverplugin.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlerror.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlfield.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlindex.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlrecord.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlquery.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlresult.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlquerymodel.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlrelationaldelegate.h \
+		../../QT/5.6/mingw49_32/include/QtWidgets/qitemdelegate.h \
+		../../QT/5.6/mingw49_32/include/QtWidgets/qlistview.h \
+		../../QT/5.6/mingw49_32/include/QtWidgets/qcombobox.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqlrelationaltablemodel.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qsqltablemodel.h \
+		../../QT/5.6/mingw49_32/include/QtSql/qtsqlversion.h \
+		../../QT/5.6/mingw49_32/include/QtCore/QDebug \
+		../../QT/5.6/mingw49_32/include/QtWidgets/QMessageBox \
+		../../QT/5.6/mingw49_32/include/QtWidgets/qmessagebox.h \
+		mainwindow.h \
+		../../QT/5.6/mingw49_32/include/QtWidgets/QMainWindow \
+		../../QT/5.6/mingw49_32/include/QtWidgets/qmainwindow.h \
+		login.h \
+		fetch.h \
+		../../QT/5.6/mingw49_32/include/QtSql/QSql
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\register.o register.cpp
 
 release/fetch.o: fetch.cpp fetch.h \
@@ -1354,7 +1491,8 @@ release/fetch.o: fetch.cpp fetch.h \
 		../../QT/5.6/mingw49_32/include/QtGui/qpen.h \
 		../../QT/5.6/mingw49_32/include/QtGui/qtextoption.h \
 		../../QT/5.6/mingw49_32/include/QtWidgets/QVBoxLayout \
-		../../QT/5.6/mingw49_32/include/QtWidgets/QWidget
+		../../QT/5.6/mingw49_32/include/QtWidgets/QWidget \
+		../../QT/5.6/mingw49_32/include/QtCore/qDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\fetch.o fetch.cpp
 
 release/moc_mainwindow.o: release/moc_mainwindow.cpp 

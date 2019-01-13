@@ -15,6 +15,9 @@ public:
     explicit Fetch(QWidget *parent = 0);
     ~Fetch();
 
+private slots:
+    void on_m_fetch_pushButton_clicked();
+
 private:
     Ui::Fetch *ui;
 };

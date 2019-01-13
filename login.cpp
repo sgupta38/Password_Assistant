@@ -29,7 +29,7 @@ void login::on_m_login_btn_clicked()
         // After login is successfull, we need to pop-up fetch windows with data which will be retrived from database.
 
         // Open new window which will display data
-        this->hide();
+        //this->hide();
         fetch_ui->setModal(true);
         fetch_ui->show();
     }

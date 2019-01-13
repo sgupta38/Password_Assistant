@@ -10,6 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     ui->m_combo_type->addItem("Internship");
     ui->m_combo_type->addItem("Personal");
     ui->m_combo_type->addItem("Private");
@@ -31,15 +32,16 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     // open a new window to register
-    this->hide();
+   // this->hide();
     register_ui->setModal(true);
     register_ui->show();
+    register_ui->setCategory(ui->m_combo_type->currentText());
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
     // To view, make sure user is correct, ask for login and password.
-    this->hide();
+   // this->hide();
     login_ui->setModal(true);
     login_ui->show();
 }
