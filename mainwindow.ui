@@ -14,7 +14,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+   <string notr="true">font: 75 9pt &quot;Palatino Linotype&quot;;
+font: 8pt &quot;MS Shell Dlg 2&quot;;</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="pushButton_3">
@@ -54,7 +55,11 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QComboBox" name="m_combo_type"/>
+      <widget class="QComboBox" name="m_combo_type">
+       <property name="styleSheet">
+        <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
@@ -82,7 +87,7 @@
      <x>0</x>
      <y>0</y>
      <width>496</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

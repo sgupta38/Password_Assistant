@@ -47,7 +47,7 @@ void create_user::on_m_register_pushButton_clicked()
                 // Initial query
                 QString query = "CREATE TABLE if not exists credentials("
                         "username VARCHAR(20)PRIMARY KEY NOT NULL,"
-                        "password VARCHAR(20));";
+                        "password BLOB);";
 
                 QSqlQuery qry;
 
@@ -68,7 +68,12 @@ void create_user::on_m_register_pushButton_clicked()
 
                 // Binding values
                 qry.addBindValue(username);
-                qry.addBindValue(pwd);
+
+                QByteArray q(pwd.toStdString().c_str());
+                qDebug() << "blob "<<q;
+                QString ss = q.toStdString().c_str();
+                qDebug() <<"normal"<<ss;
+                qry.addBindValue(q);
 
                 if(! qry.exec())
                 {

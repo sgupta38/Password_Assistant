@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <mainwindow.h>
+#include <qcryptographichash.h>
 
 registerr::registerr(QWidget *parent) :
     QDialog(parent),
@@ -29,6 +30,7 @@ delete ui;
 void registerr::on_m_register_pushButton_clicked()
 {
     MainWindow conn;
+
     // Here, retrive username and password and company name
     // Add this to SQLLite
 
@@ -36,6 +38,7 @@ void registerr::on_m_register_pushButton_clicked()
     company = ui->m_company_lineEdit->text();
     username = ui->m_username_lineEdit->text();
     password = ui->m_password_lineEdit->text();
+
 
     // Extra checks if any of the field is empty, return error.
     if(company == "" || username == "" || password == "")
@@ -56,9 +59,10 @@ void registerr::on_m_register_pushButton_clicked()
                 "category VARCHAR(20),"
                 "companyname VARCHAR(20) PRIMARY KEY NOT NULL,"
                 "username VARCHAR(20),"
-                "password VARCHAR(20));";
+                "password BLOB);";
 
         QSqlQuery qry;
+
 
         if(! qry.exec(query))
         {
@@ -78,7 +82,11 @@ void registerr::on_m_register_pushButton_clicked()
         qry.addBindValue(cat);
         qry.addBindValue(company);
         qry.addBindValue(username);
-        qry.addBindValue(password);
+        QByteArray q(password.toStdString().c_str());
+        qDebug() << "blob "<<q;
+        QString ss = q.toStdString().c_str();
+        qDebug() <<"normal"<<ss;
+        qry.addBindValue(q);
 
         if(! qry.exec())
         {

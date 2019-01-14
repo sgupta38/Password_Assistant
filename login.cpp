@@ -30,48 +30,70 @@ login::~login()
 
 void login::on_m_login_btn_clicked()
 {
-    //
     MainWindow conn;
-    QSqlQuery qry(conn.mydb);
+    QString db_username, back;
+    QString username = ui->m_lineEdit_username->text();
+    QString pwd = ui->m_lineEdit_password->text();
+
+    // Add to SQL
 
     if(!conn.connOpen())
-        qDebug()<< "Error in opening DB";
-    else
-    {
-
-       QString username, pwd;
-
-       username = ui->m_lineEdit_username->text();
-       pwd = ui->m_lineEdit_password->text();
-
-         //todo: Database connection problem here. Need to see.
-//        // Check if user already exists
-//        qry.prepare("SELECT * from credentials where username=?");
-//        qry.addBindValue(username);
-
-//        if(qry.exec())
-//        {
-//            while(qry.next()) // If success means, user already exists
-//            {
-//                db_username = qry.value(0).toString();
-//                db_pwd = qry.value(1).toString();
-//            }
-//        }
-//        else
-//        {
-//            qDebug() << "Error in query: Failed to retrieve credentials";
-//            qDebug() << conn.mydb.lastError();
-//            return;
-//        }
-
-        if(username == "sonu" && pwd == "ss" )
+        qDebug() << "Error in opening databse"<<endl;
+    else{
+        if(!conn.connOpen())
+            qDebug() << "Error in opening databse"<<endl;
+        else
         {
-            fetch_ui->setModal(true);
-            fetch_ui->show();
+        qDebug() <<"Databse opened successfully..!!"<<endl;
+
+        // Initial query
+        QString query = "CREATE TABLE credentials2("
+                "username VARCHAR(20) PRIMARY KEY NOT NULL,"
+                "password BLOB);";
+
+        QSqlQuery qry;
+
+        if(! qry.exec(query))
+        {
+            qDebug() << "Error in database query";
+        }
+
+        qDebug() <<"Databse opened successfully..!!"<<endl;
+
+        // Initial query
+        query.clear();
+        query = "SELECT * from credentials where username='"+username+"';";
+
+        if(! qry.exec(query))
+        {
+            qDebug() << "Error in database query";
         }
         else
         {
-            QMessageBox::information(this, "Login Failed", "Invalid Username or Password");
+            qDebug()<<"Sucess";
+            while(qry.next()) // If success means, user already exists
+           {
+               db_username = qry.value(0).toString();
+               QMessageBox::information(this, "hh", db_username);
+
+               QByteArray db_pwd = qry.value(1).toByteArray();
+               qDebug()<<"Bytearray"<<db_pwd;
+
+               back = QString::fromStdString(db_pwd.data());
+               qDebug()<< "normal" <<back;
+           }
         }
+    }
+
+
+    if(username == db_username && pwd == back )
+    {
+        fetch_ui->setModal(true);
+        fetch_ui->show();
+    }
+    else
+    {
+        QMessageBox::information(this, "Login Failed", "Invalid Username or Password");
+    }
     }
 }

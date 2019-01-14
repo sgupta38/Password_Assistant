@@ -32,7 +32,7 @@
      <x>220</x>
      <y>90</y>
      <width>206</width>
-     <height>57</height>
+     <height>61</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -49,7 +49,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="m_lineEdit_username"/>
+       <widget class="QLineEdit" name="m_lineEdit_username">
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -67,6 +71,9 @@
       </item>
       <item>
        <widget class="QLineEdit" name="m_lineEdit_password">
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
         <property name="echoMode">
          <enum>QLineEdit::Password</enum>
         </property>

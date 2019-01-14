@@ -5,6 +5,7 @@
 #include <fetch.h>
 #include <create_user.h>
 #include <QPixmap>
+#include <QMessagebox>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -43,6 +44,12 @@ void MainWindow::on_pushButton_clicked()
 {
     // open a new window to register
    // this->hide();
+
+    if(ui->m_combo_type->currentIndex() == 0)
+    {
+        QMessageBox::warning(this, "Invalid Category", "Please Select Proper Category first");
+        return;
+    }
     register_ui->setModal(true);
     register_ui->show();
     register_ui->setCategory(ui->m_combo_type->currentText());
