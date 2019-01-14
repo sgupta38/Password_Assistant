@@ -16,7 +16,10 @@ public:
     ~Fetch();
 
 private slots:
-    void on_m_fetch_pushButton_clicked();
+
+    void on_m_category_cmb_activated(const QString &arg1);
+
+    void on_m_company_cmb_activated(const QString &arg1);
 
 private:
     Ui::Fetch *ui;

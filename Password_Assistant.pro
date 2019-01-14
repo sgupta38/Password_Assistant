@@ -16,14 +16,22 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     login.cpp \
     register.cpp \
-    fetch.cpp
+    fetch.cpp \
+    create_user.cpp
 
 HEADERS  += mainwindow.h \
     login.h \
     register.h \
-    fetch.h
+    fetch.h \
+    create_user.h
 
 FORMS    += mainwindow.ui \
     login.ui \
     register.ui \
-    fetch.ui
+    fetch.ui \
+    create_user.ui
+
+RESOURCES += \
+    resource.qrc
+
+RC_ICONS = img/icon.ico

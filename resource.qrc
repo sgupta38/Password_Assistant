@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>img/icon_spm20.png</file>
+        <file>img/Register.png</file>
+        <file>img/login.png</file>
+        <file>img/background.jpg</file>
+        <file>img/icon.ico</file>
+    </qresource>
+</RCC>

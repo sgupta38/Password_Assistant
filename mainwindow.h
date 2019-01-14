@@ -7,6 +7,8 @@
 #include <QSql>
 #include <QSqlDatabase>
 #include <QDebug>
+#include <create_user.h>
+
 
 namespace Ui {
 class MainWindow;
@@ -52,10 +54,13 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_pushButton_3_clicked();
+
 private:
     Ui::MainWindow *ui;
     login *login_ui;
     registerr *register_ui;
+    create_user *create_ui;
 
 };
 

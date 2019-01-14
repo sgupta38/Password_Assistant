@@ -12,6 +12,13 @@ registerr::registerr(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("Register");
+
+    // ADd image
+
+    QPixmap pix(":/resources/img/Register.png");
+    int w = ui->m_register_img->width();
+    int h = ui->m_register_img->height();
+    ui->m_register_img->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
 }
 
 registerr::~registerr()
@@ -47,7 +54,7 @@ void registerr::on_m_register_pushButton_clicked()
         // Initial query
         QString query = "CREATE TABLE company("
                 "category VARCHAR(20),"
-                "companyname VARCHAR(20),"
+                "companyname VARCHAR(20) PRIMARY KEY NOT NULL,"
                 "username VARCHAR(20),"
                 "password VARCHAR(20));";
 

@@ -3,6 +3,8 @@
 #include <login.h>
 #include <register.h>
 #include <fetch.h>
+#include <create_user.h>
+#include <QPixmap>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -11,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    this->setWindowTitle("Password Assistant");
+
+    ui->m_combo_type->addItem("Select ...");
     ui->m_combo_type->addItem("Internship");
     ui->m_combo_type->addItem("Personal");
     ui->m_combo_type->addItem("Private");
@@ -18,8 +23,13 @@ MainWindow::MainWindow(QWidget *parent) :
     // Creating child windows
     login_ui = new login(this);
     register_ui = new registerr(this);
+    create_ui = new create_user(this);
 
-    // creating data vase here.
+    // creating image here.
+    QPixmap pix(":/resources/img/icon_spm20.png");
+    int w = ui->m_image_label->width();
+    int h = ui->m_image_label->height();
+    ui->m_image_label->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
 }
 
 MainWindow::~MainWindow()
@@ -44,4 +54,10 @@ void MainWindow::on_pushButton_2_clicked()
    // this->hide();
     login_ui->setModal(true);
     login_ui->show();
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    create_ui->setModal(true);
+    create_ui->show();
 }

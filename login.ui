@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="m_login_btn">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>140</y>
+     <x>280</x>
+     <y>170</y>
      <width>93</width>
      <height>28</height>
     </rect>
@@ -26,11 +26,11 @@
     <string>Login</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>60</y>
+     <x>220</x>
+     <y>90</y>
      <width>206</width>
      <height>57</height>
     </rect>
@@ -66,18 +66,32 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="m_lineEdit_password"/>
+       <widget class="QLineEdit" name="m_lineEdit_password">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_2</zorder>
-  <zorder>m_lineEdit_username</zorder>
-  <zorder>m_lineEdit_password</zorder>
+  <widget class="QLabel" name="m_login_img">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>161</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <zorder>layoutWidget</zorder>
   <zorder>m_login_btn</zorder>
+  <zorder>m_login_img</zorder>
  </widget>
  <resources/>
  <connections/>
