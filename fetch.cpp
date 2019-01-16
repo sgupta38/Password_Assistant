@@ -65,8 +65,6 @@ void Fetch::on_m_category_cmb_activated(const QString &arg1)
         {
             QMessageBox::warning(this, "Error", "No Such Record Exists");
         }
-
-
         conn.connClose();
 
     }

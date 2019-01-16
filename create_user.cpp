@@ -69,11 +69,11 @@ void create_user::on_m_register_pushButton_clicked()
                 // Binding values
                 qry.addBindValue(username);
 
-                QByteArray q(pwd.toStdString().c_str());
-                qDebug() << "blob "<<q;
-                QString ss = q.toStdString().c_str();
-                qDebug() <<"normal"<<ss;
-                qry.addBindValue(q);
+                QByteArray blob_pwd(pwd.toStdString().c_str());
+                //qDebug() << "blob "<<blob_pwd;
+                QString ss = blob_pwd.toStdString().c_str();
+                //qDebug() <<"normal"<<ss;
+                qry.addBindValue(blob_pwd);
 
                 if(! qry.exec())
                 {

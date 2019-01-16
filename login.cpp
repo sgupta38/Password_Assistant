@@ -31,34 +31,20 @@ login::~login()
 void login::on_m_login_btn_clicked()
 {
     MainWindow conn;
-    QString db_username, back;
+    QString db_username, db_pwd;
     QString username = ui->m_lineEdit_username->text();
     QString pwd = ui->m_lineEdit_password->text();
 
     // Add to SQL
 
     if(!conn.connOpen())
+    {
         qDebug() << "Error in opening databse"<<endl;
-    else{
-        if(!conn.connOpen())
-            qDebug() << "Error in opening databse"<<endl;
-        else
-        {
-        qDebug() <<"Databse opened successfully..!!"<<endl;
-
-        // Initial query
-        QString query = "CREATE TABLE credentials2("
-                "username VARCHAR(20) PRIMARY KEY NOT NULL,"
-                "password BLOB);";
-
+    }
+    else
+    {
         QSqlQuery qry;
-
-        if(! qry.exec(query))
-        {
-            qDebug() << "Error in database query";
-        }
-
-        qDebug() <<"Databse opened successfully..!!"<<endl;
+        QString query;
 
         // Initial query
         query.clear();
@@ -71,29 +57,29 @@ void login::on_m_login_btn_clicked()
         else
         {
             qDebug()<<"Sucess";
-            while(qry.next()) // If success means, user already exists
+            if(qry.next()) // If success means, user already exists
            {
                db_username = qry.value(0).toString();
-               QMessageBox::information(this, "hh", db_username);
 
-               QByteArray db_pwd = qry.value(1).toByteArray();
-               qDebug()<<"Bytearray"<<db_pwd;
+               // Password was saved in 'BLOB'
+               QByteArray db_blob_pwd = qry.value(1).toByteArray();
+               //qDebug()<<"Bytearray"<<db_pwd;
 
-               back = QString::fromStdString(db_pwd.data());
-               qDebug()<< "normal" <<back;
+               // COnverting BLOB to normal Text.
+               db_pwd = QString::fromStdString(db_blob_pwd.data());
+               //qDebug()<< "normal" <<back;
            }
         }
-    }
 
-
-    if(username == db_username && pwd == back )
-    {
-        fetch_ui->setModal(true);
-        fetch_ui->show();
-    }
-    else
-    {
-        QMessageBox::information(this, "Login Failed", "Invalid Username or Password");
-    }
+        // credential check will be done here.
+        if(username == db_username && pwd == db_pwd )
+        {
+            fetch_ui->setModal(true);
+            fetch_ui->show();
+        }
+        else
+        {
+            QMessageBox::information(this, "Login Failed", "Invalid Username or Password");
+        }
     }
 }
