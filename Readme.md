@@ -5,8 +5,15 @@ Password Assistant ( Developed using Qt C++ )
 
 ##### In this digitalization era, we all are connected to Internet and every firm requires user registration. I found it very hard to memorize usernames and passwords for many things be it banks, iPhone apps, Netflix, job portals and many more. I have created one centralized solution which can be used to make life easy.
 
+Note: Currently tool is supported for windows platform. However, you cant use this tool directly on Linux because it requires full environment setup. I'm currently busy with mu courses, I would appreciate if anyone does this part, I'm open for code review and merging. Feel free to update/suggest changes.
 
-To directly access Password_Assistant, simply got to 'Tool' Folder.
+Todo:
+    [x] 'Static build' for Windows 
+    [ ] ['Static build' for linux](http://amin-ahmadi.com/2016/09/19/build-qt-statically-for-linux/)
+    [ ] Password encryption/ blob storage in Qt
+	[ ] Code cleaning / Remove configuration file
+
+To directly access Password_Assistant, simply goto 'Tool' Folder.
 
 How to use?
 --
