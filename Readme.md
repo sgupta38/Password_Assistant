@@ -8,10 +8,10 @@ Password Assistant ( Developed using Qt C++ )
 Note: Currently tool is supported for windows platform. However, you cant use this tool directly on Linux because it requires full environment setup. I'm currently busy with mu courses, I would appreciate if anyone does this part, I'm open for code review and merging. Feel free to update/suggest changes.
 
 Todo:
-    [x] 'Static build' for Windows 
-    [ ] ['Static build' for linux](http://amin-ahmadi.com/2016/09/19/build-qt-statically-for-linux/)
-    [ ] Password encryption/ blob storage in Qt
-	[ ] Code cleaning / Remove configuration file
+- [x] 'Static build' for Windows 
+- [ ] 'Static build' for Linux
+- [ ] Password encryption/ blob storage in Qt
+- [ ] Code cleaning / Remove configuration file
 
 To directly access Password_Assistant, simply goto 'Tool' Folder.
 
@@ -26,4 +26,6 @@ How to use?
 
 Note: If you are building Qt based 'Static' app, please go through the following link.
 
-https://wiki.qt.io/Building_a_static_Qt_for_Windows_using_MinGW
+https://wiki.qt.io/Building_a_static_Qt_for_Windows_using_MinGW [windows]
+
+http://amin-ahmadi.com/2016/09/19/build-qt-statically-for-linux/ [linux] 
