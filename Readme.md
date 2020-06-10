@@ -5,7 +5,7 @@ Password Assistant ( Developed using Qt C++ )
 
 ##### In this digitalization era, we all are connected to Internet and every firm requires user registration. I found it very hard to memorize usernames and passwords for many things be it banks, iPhone apps, Netflix, job portals and many more. I have created one centralized solution which can be used to make life easy.
 
-Note: Currently tool is supported for windows platform. However, you cant use this tool directly on Linux because it requires full environment setup. I'm currently busy with mu courses, I would appreciate if anyone does this part, I'm open for code review and merging. Feel free to update/suggest changes.
+Note: Currently tool is supported for windows platform. However, you cant use this tool directly on Linux because it requires full environment setup. I would appreciate if anyone does this part, I'm open for code review and merging. Feel free to update/suggest changes.
 
 Todo:
 - [x] 'Static build' for Windows 
